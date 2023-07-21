@@ -8,8 +8,8 @@
 
       <div class="col-9">
         <div class="row">
-          <div class="gifts col-4 mt-5 p-3">
-            <GiftCard v-for="gift in gifts" :key="gift.id" :gift="g" />
+          <div v-for="gift in gifts" :key="gift.id" class="gifts col-4 mt-5 p-3">
+            <GiftCard :giftProp="gift" />
         <!-- <div v-for="gift in gifts" :key="gift.id" class="col-4 mt-5 p-3"> -->
           <!-- <div class="card" style="width: 18rem;">
           <img :src="gift.imgUrl" class="card-img-top" alt="Bad Gift">
@@ -31,7 +31,7 @@ import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 import {giftsService} from "../services/GiftsService.js"
 import { AppState } from "../AppState.js";
-import GiftCard from "../components/GiftCard.vue.js";
+import GiftCard from "../components/GiftCard.vue";
 
 
 
